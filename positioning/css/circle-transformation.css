@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.flex-container {
+  border: 2px dashed #2a2a2a;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 100px);
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  margin-left: 30px;
+  margin-right: 30px;
+  border-radius: 50%;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+  transition-property: transform;
+}
+
+.flex-container:hover .circle {
+  transform: scale(1.5);
+}
+
+.circle:nth-child(1) {
+  background-color: orange;
+
+  transition-duration: 500ms;
+}
+
+.circle:nth-child(2) {
+  background-color: #03a9f4;
+
+  transition-duration: 1500ms;
+}
+
+.circle:nth-child(3) {
+  background-color: palevioletred;
+
+  transition-duration: 3000ms;
+}
+
+/* <!-------- 6 circles ------> */
+
+.six-circles {
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    border: 2px dashed #2a2a2a;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.circolo {
+    /* margin-bottom: 5px; */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+    transform: translateX(0);
+    transition-property: transform;
+    transition-duration: 2000ms;
+
+}
+
+.container > .circolo:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.container:hover .circolo {
+    transform: translateX(calc(100vw - 86px));
+}
+
+.circolo:nth-child(1) {
+    background-color: #03a9f4;
+    transition-timing-function: linear;
+}
+
+.circolo:nth-child(2) {
+    background-color:aliceblue;
+    transition-timing-function: ease;
+}
+
+.circolo:nth-child(3) {
+    background-color: tomato;
+    transition-timing-function: ease-in;
+}
+
+.circolo:nth-child(4) {
+    background-color: teal;
+    transition-timing-function: ease-out;
+}
+
+.circolo:nth-child(5) {
+    background-color: #ffeb3b;
+    transition-timing-function: ease-in-out ;
+}
+
+.circolo:nth-child(6) {
+    background-color: #e91e63;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
